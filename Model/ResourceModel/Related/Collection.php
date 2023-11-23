@@ -8,21 +8,18 @@ declare(strict_types=1);
 namespace PixieMedia\Suggestion\Model\ResourceModel\Related;
 
 use Magento\Eav\Model\Config;
-use Magento\Eav\Model\Entity\Type;
-use Magento\Eav\Model\ResourceModel\Entity\Attribute;
 use Magento\Framework\Data\Collection\Db\FetchStrategyInterface;
 use Magento\Framework\Data\Collection\EntityFactoryInterface;
 use Magento\Framework\DB\Adapter\AdapterInterface;
-use Magento\Framework\DB\Select;
 use Magento\Framework\Event\ManagerInterface;
+use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
-use Psr\Log\LoggerInterface;
-use PixieMedia\Suggestion\Api\Data\RelatedInterface;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Store\Model\Store;
 use Magento\Store\Model\StoreManagerInterface;
-use Magento\Framework\Exception\NoSuchEntityException;
+use PixieMedia\Suggestion\Api\Data\RelatedInterface;
+use Psr\Log\LoggerInterface;
 
 class Collection extends AbstractCollection
 {
@@ -152,8 +149,7 @@ class Collection extends AbstractCollection
                         0 => ['finset' => Store::DEFAULT_STORE_ID],
                         1 => ['finset' => $store->getId()],
                     ]
-                ],
-                'left'
+                ]
             );
             return $this;
         }

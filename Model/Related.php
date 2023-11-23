@@ -7,9 +7,9 @@ declare(strict_types=1);
 
 namespace PixieMedia\Suggestion\Model;
 
+use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 use Magento\Framework\Model\AbstractModel;
 use PixieMedia\Suggestion\Api\Data\RelatedInterface;
-use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 
 class Related extends AbstractModel implements RelatedInterface
 {

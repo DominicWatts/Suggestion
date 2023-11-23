@@ -5,19 +5,18 @@ declare(strict_types=1);
 namespace PixieMedia\Suggestion\Block\Adminhtml\Related\Edit\Tab;
 
 use Magento\Backend\Block\Template\Context;
+use Magento\Backend\Block\Widget\Grid\Column;
 use Magento\Backend\Block\Widget\Grid\Extended;
 use Magento\Backend\Block\Widget\Tab\TabInterface;
-use Magento\Backend\Block\Widget\Grid\Column;
-use Magento\Catalog\Model\Product as ModelProduct;
 use Magento\Backend\Helper\Data;
-use Magento\Eav\Model\ResourceModel\Entity\Attribute\Set\CollectionFactory as SetCollectionFactory;
-use Magento\Catalog\Model\ProductFactory;
-use Magento\Catalog\Model\Product\Type;
 use Magento\Catalog\Model\Product\Attribute\Source\Status;
+use Magento\Catalog\Model\Product\Type;
 use Magento\Catalog\Model\Product\Visibility;
-use Magento\Framework\Registry;
+use Magento\Catalog\Model\ProductFactory;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 use Magento\Directory\Model\Currency;
+use Magento\Eav\Model\ResourceModel\Entity\Attribute\Set\CollectionFactory as SetCollectionFactory;
+use Magento\Framework\Registry;
 use Magento\Store\Model\ScopeInterface;
 use PixieMedia\Suggestion\Model\RelatedFactory;
 

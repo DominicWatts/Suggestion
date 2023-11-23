@@ -8,10 +8,10 @@ declare(strict_types=1);
 
 namespace PixieMedia\Suggestion\Observer\Frontend\Controller;
 
-use Magento\Framework\Event\ObserverInterface;
-use Magento\Framework\Event\Observer as EventObserver;
-use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\Event\Observer as EventObserver;
+use Magento\Framework\Event\ObserverInterface;
 
 class ActionPredispatchCatalogProductView implements ObserverInterface
 {
@@ -32,7 +32,7 @@ class ActionPredispatchCatalogProductView implements ObserverInterface
     public function execute(EventObserver $observer)
     {
         $isEnabled = $this->_scopeConfig->getValue(
-            'pixie_suggested/options/enabled', 
+            'pixie_suggested/options/enabled',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
         if ($isEnabled) {

@@ -50,6 +50,7 @@ class Save extends \Magento\Backend\App\Action
 
             if (isset($data['product'])) {
                 $data['related_ids'] = $data['product']['list'];
+                /* @phpstan-ignore-next-line */
                 unset($data['product']);
             }
 

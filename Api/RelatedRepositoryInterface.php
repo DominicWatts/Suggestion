@@ -7,8 +7,6 @@ declare(strict_types=1);
 
 namespace PixieMedia\Suggestion\Api;
 
-use Magento\Framework\Api\SearchCriteriaInterface;
-
 interface RelatedRepositoryInterface
 {
     /**

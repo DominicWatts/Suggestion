@@ -2,15 +2,21 @@
 
 namespace PixieMedia\Suggestion\Block;
 
-use PixieMedia\Suggestion\Model\RelatedFactory;
-use PixieMedia\Suggestion\Model\ResourceModel\Related\CollectionFactory as RelatedCollectionFactory;
+use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Element\Template;
-use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
+use PixieMedia\Suggestion\Model\ResourceModel\Related\CollectionFactory as RelatedCollectionFactory;
 
 class Suggested extends Template
 {
+    /**
+     * @var \Magento\Framework\Registry
+     */
     protected $registry;
+
+    /**
+     * PixieMedia\Suggestion\Model\ResourceModel\Related\CollectionFactory
+     **/
     protected $relatedCollectionFactory;
 
     /**
@@ -80,7 +86,7 @@ class Suggested extends Template
         foreach ($suggested as $suggest) {
             foreach ($suggest->getProductsIds() as $id) {
                 $array[$id] = $id;
-            };
+            }
         }
         return $this->getVisibleProductsById($array);
     }

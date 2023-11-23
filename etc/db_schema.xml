@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="pixiemedia_suggestion_related" resource="default" engine="innodb" comment="pixiemedia_suggestion_related Table">
+		<column xsi:type="int" name="related_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="related_id"/>
+		</constraint>
+		<column name="parent_sku" nullable="true" xsi:type="varchar" comment="Parent Product ID" length="255"/>
+		<column name="related_ids" nullable="true" xsi:type="varchar" comment="Releated Products" length="255"/>
+		<column name="status" nullable="true" xsi:type="int" comment="Status" identity="false"/>
+		<column name="created_at" nullable="true" xsi:type="datetime" comment="Created At"/>
+		<column name="updated_at" nullable="true" xsi:type="text" comment="Updated At"/>
+		<column name="store_id" nullable="true" xsi:type="varchar" comment="store_id" length="255"/>
+	</table>
+</schema>

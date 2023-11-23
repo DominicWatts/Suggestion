@@ -1,0 +1,11 @@
+<?php
+/**
+ * @var $block \PixieMedia\Suggestion\Block\Suggested
+ */
+$products = $block->getAllSuggested();
+?>
+<?php foreach($products as $product): ?>
+<div>
+    <?= $product->getId() ?>
+</div>
+<?php endforeach; ?>

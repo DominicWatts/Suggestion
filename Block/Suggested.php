@@ -12,12 +12,12 @@ class Suggested extends Template
 {
     protected $registry;
     protected $relatedCollectionFactory;
-    
+
     /**
      * @var \Magento\Catalog\Model\Product\Visibility
      */
     protected $productVisibility;
-    
+
     /**
      * @var \Magento\CatalogInventory\Helper\Stock
      */
@@ -26,7 +26,7 @@ class Suggested extends Template
     /**
      * @var ProductCollectionFactory
      */
-    private $productCollectionFactory;    
+    private $productCollectionFactory;
 
     /**
      * @param Template\Context $context
@@ -66,18 +66,19 @@ class Suggested extends Template
             ->addParentSkuFilter($currentProduct->getSku())
             ->addStoreFilter();
 
-            return $relatedCollection;
+        return $relatedCollection;
     }
 
     /**
      * Get all suggested - so all products from all suggested rules
      * @return void
      */
-    public function getAllSuggested() {
+    public function getAllSuggested()
+    {
         $suggested = $this->getSuggested();
         $array = [];
-        foreach($suggested as $suggest) {
-            foreach($suggest->getProductsIds() as $id) { 
+        foreach ($suggested as $suggest) {
+            foreach ($suggest->getProductsIds() as $id) {
                 $array[$id] = $id;
             };
         }

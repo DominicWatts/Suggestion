@@ -4,8 +4,8 @@
  */
 $products = $block->getAllSuggested();
 ?>
-<?php foreach($products as $product): ?>
+<?php foreach ($products as $product): ?>
 <div>
-    <?= $product->getId() ?>
+    <?= $block->escapeHtmlAttr($product->getId()) ?>
 </div>
 <?php endforeach; ?>

@@ -1,16 +1,28 @@
 {
-    "name": "pixiemedia/module-suggestion",
+    "name": "dominicwatts/suggestion",
     "description": "Related products to show when SKU is OOS or coming soon",
     "type": "magento2-module",
     "license": "GPL-3.0",
+    "version": "1.0.0",
     "authors": [
         {
-            "name": "Mage2Gen",
-            "email": "info@mage2gen.com"
+            "name": "Dominic Watts",
+            "email": "dominic@pixie.agency"
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "require": {
+        "magento/framework": "*",
+        "magento/module-catalog": "*",
+        "magento/module-store": "*",
+        "php": ">=7.1.0"
+    },
     "autoload": {
         "files": [
             "registration.php"

@@ -11,7 +11,6 @@ use Magento\Framework\Api\SearchCriteriaInterface;
 
 interface RelatedRepositoryInterface
 {
-
     /**
      * Save Related
      * @param \PixieMedia\Suggestion\Api\Data\RelatedInterface $related
@@ -59,4 +58,3 @@ interface RelatedRepositoryInterface
      */
     public function deleteById($relatedId);
 }
-

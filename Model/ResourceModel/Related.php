@@ -11,7 +11,6 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 class Related extends AbstractDb
 {
-
     /**
      * @inheritDoc
      */
@@ -20,4 +19,3 @@ class Related extends AbstractDb
         $this->_init('pixiemedia_suggestion_related', 'related_id');
     }
 }
-

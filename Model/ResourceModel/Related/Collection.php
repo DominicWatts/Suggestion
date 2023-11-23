@@ -44,7 +44,7 @@ class Collection extends AbstractCollection
     /**
      * @var TimezoneInterface
      */
-    protected $localeDate;    
+    protected $localeDate;
 
     /**
      * @param EntityFactoryInterface $entityFactory
@@ -82,7 +82,7 @@ class Collection extends AbstractCollection
         );
     }
 
-     /**
+    /**
      * Set random groups order
      * @return $this
      */
@@ -118,11 +118,11 @@ class Collection extends AbstractCollection
             $this->addFieldToFilter(
                 [RelatedInterface::PARENT_SKU, RelatedInterface::PARENT_SKU],
                 [
-                    ['eq' => $sku], 
+                    ['eq' => $sku],
                     ['null' => true],
                 ]
             );
-        } 
+        }
         return $this;
     }
 
@@ -183,4 +183,3 @@ class Collection extends AbstractCollection
         return $this;
     }
 }
-

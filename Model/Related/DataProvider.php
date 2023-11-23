@@ -13,7 +13,6 @@ use PixieMedia\Suggestion\Model\ResourceModel\Related\CollectionFactory;
 
 class DataProvider extends AbstractDataProvider
 {
-
     /**
      * @var array
      */
@@ -65,15 +64,14 @@ class DataProvider extends AbstractDataProvider
             $this->loadedData[$model->getId()] = $model->getData();
         }
         $data = $this->dataPersistor->get('pixiemedia_suggestion_related');
-        
+
         if (!empty($data)) {
             $model = $this->collection->getNewEmptyItem();
             $model->setData($data);
             $this->loadedData[$model->getId()] = $model->getData();
             $this->dataPersistor->clear('pixiemedia_suggestion_related');
         }
-        
+
         return $this->loadedData;
     }
 }
-

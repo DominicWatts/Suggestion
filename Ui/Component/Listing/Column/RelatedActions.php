@@ -9,11 +9,10 @@ namespace PixieMedia\Suggestion\Ui\Component\Listing\Column;
 
 class RelatedActions extends \Magento\Ui\Component\Listing\Columns\Column
 {
-
-    const URL_PATH_EDIT = 'pixiemedia_suggestion/related/edit';
-    const URL_PATH_DETAILS = 'pixiemedia_suggestion/related/details';
+    public const URL_PATH_EDIT = 'pixiemedia_suggestion/related/edit';
+    public const URL_PATH_DETAILS = 'pixiemedia_suggestion/related/details';
     protected $urlBuilder;
-    const URL_PATH_DELETE = 'pixiemedia_suggestion/related/delete';
+    public const URL_PATH_DELETE = 'pixiemedia_suggestion/related/delete';
 
     /**
      * @param \Magento\Framework\View\Element\UiComponent\ContextInterface $context
@@ -71,8 +70,7 @@ class RelatedActions extends \Magento\Ui\Component\Listing\Columns\Column
                 }
             }
         }
-        
+
         return $dataSource;
     }
 }
-

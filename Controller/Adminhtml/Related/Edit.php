@@ -9,7 +9,6 @@ namespace PixieMedia\Suggestion\Controller\Adminhtml\Related;
 
 class Edit extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
 {
-
     protected $resultPageFactory;
 
     /**
@@ -36,7 +35,7 @@ class Edit extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
         // 1. Get ID and create model
         $id = $this->getRequest()->getParam('related_id');
         $model = $this->_objectManager->create(\PixieMedia\Suggestion\Model\Related::class);
-        
+
         // 2. Initial checking
         if ($id) {
             $model->load($id);
@@ -48,7 +47,7 @@ class Edit extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
             }
         }
         $this->_coreRegistry->register('pixiemedia_suggestion_related', $model);
-        
+
         // 3. Build edit form
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
@@ -61,4 +60,3 @@ class Edit extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
         return $resultPage;
     }
 }
-

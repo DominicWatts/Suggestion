@@ -27,7 +27,7 @@ class Related extends AbstractModel implements RelatedInterface
      * @var \Magento\Catalog\Model\Product\Visibility
      */
     protected $productVisibility;
-    
+
     /**
      * @var \Magento\CatalogInventory\Helper\Stock
      */
@@ -54,7 +54,7 @@ class Related extends AbstractModel implements RelatedInterface
         \Magento\Catalog\Model\Product\Visibility $productVisibility,
         \Magento\CatalogInventory\Helper\Stock $stockHelper,
         array $data = []
-    ) { 
+    ) {
         $this->dateTime = $dateTime;
         $this->productCollectionFactory = $productCollectionFactory;
         $this->productVisibility = $productVisibility;
@@ -227,4 +227,3 @@ class Related extends AbstractModel implements RelatedInterface
         return $collection;
     }
 }
-

@@ -9,7 +9,6 @@ namespace PixieMedia\Suggestion\Controller\Adminhtml\Related;
 
 class NewAction extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
 {
-
     protected $resultForwardFactory;
 
     /**
@@ -38,4 +37,3 @@ class NewAction extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
         return $resultForward->forward('edit');
     }
 }
-

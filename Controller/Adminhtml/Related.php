@@ -9,8 +9,7 @@ namespace PixieMedia\Suggestion\Controller\Adminhtml;
 
 abstract class Related extends \Magento\Backend\App\Action
 {
-
-    const ADMIN_RESOURCE = 'PixieMedia_Suggestion::top_level';
+    public const ADMIN_RESOURCE = 'PixieMedia_Suggestion::top_level';
     protected $_coreRegistry;
 
     /**
@@ -39,4 +38,3 @@ abstract class Related extends \Magento\Backend\App\Action
         return $resultPage;
     }
 }
-

@@ -9,7 +9,6 @@ namespace PixieMedia\Suggestion\Api\Data;
 
 interface RelatedSearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface
 {
-
     /**
      * Get Related list.
      * @return \PixieMedia\Suggestion\Api\Data\RelatedInterface[]
@@ -23,4 +22,3 @@ interface RelatedSearchResultsInterface extends \Magento\Framework\Api\SearchRes
      */
     public function setItems(array $items);
 }
-

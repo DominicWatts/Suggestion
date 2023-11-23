@@ -20,7 +20,6 @@ use PixieMedia\Suggestion\Model\ResourceModel\Related\CollectionFactory as Relat
 
 class RelatedRepository implements RelatedRepositoryInterface
 {
-
     /**
      * @var Related
      */
@@ -104,17 +103,17 @@ class RelatedRepository implements RelatedRepositoryInterface
         \Magento\Framework\Api\SearchCriteriaInterface $criteria
     ) {
         $collection = $this->relatedCollectionFactory->create();
-        
+
         $this->collectionProcessor->process($criteria, $collection);
-        
+
         $searchResults = $this->searchResultsFactory->create();
         $searchResults->setSearchCriteria($criteria);
-        
+
         $items = [];
         foreach ($collection as $model) {
             $items[] = $model;
         }
-        
+
         $searchResults->setItems($items);
         $searchResults->setTotalCount($collection->getSize());
         return $searchResults;
@@ -146,4 +145,3 @@ class RelatedRepository implements RelatedRepositoryInterface
         return $this->delete($this->get($relatedId));
     }
 }
-

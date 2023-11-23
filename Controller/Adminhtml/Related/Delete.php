@@ -9,7 +9,6 @@ namespace PixieMedia\Suggestion\Controller\Adminhtml\Related;
 
 class Delete extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
 {
-
     /**
      * Delete action
      *
@@ -44,4 +43,3 @@ class Delete extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
         return $resultRedirect->setPath('*/*/');
     }
 }
-

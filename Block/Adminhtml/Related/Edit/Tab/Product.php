@@ -353,7 +353,7 @@ class Product extends Extended implements TabInterface
 
         if ($selected = $this->coreRegistry->registry('pixiemedia_suggestion_related')) {
             $collection = $selected->getProductsCollection();
-        } 
+        }
 
         foreach ($collection as $product) {
             $products[$product->getId()] = ['sku' => $product->getSku()];

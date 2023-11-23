@@ -9,14 +9,13 @@ namespace PixieMedia\Suggestion\Api\Data;
 
 interface RelatedInterface
 {
-
-    const UPDATED_AT = 'updated_at';
-    const RELATED_IDS = 'related_ids';
-    const STORE_ID = 'store_id';
-    const CREATED_AT = 'created_at';
-    const STATUS = 'status';
-    const RELATED_ID = 'related_id';
-    const PARENT_SKU = 'parent_sku';
+    public const UPDATED_AT = 'updated_at';
+    public const RELATED_IDS = 'related_ids';
+    public const STORE_ID = 'store_id';
+    public const CREATED_AT = 'created_at';
+    public const STATUS = 'status';
+    public const RELATED_ID = 'related_id';
+    public const PARENT_SKU = 'parent_sku';
 
     /**
      * Get related_id
@@ -109,4 +108,3 @@ interface RelatedInterface
      */
     public function setStoreId($storeId);
 }
-

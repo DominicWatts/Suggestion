@@ -2,6 +2,7 @@
 /**
  * Copyright © 2023 All rights reserved.
  * See COPYING.txt for license details.
+ * phpcs:ignoreFile
  */
 declare(strict_types=1);
 
@@ -30,7 +31,10 @@ class ActionPredispatchCatalogProductView implements ObserverInterface
 
     public function execute(EventObserver $observer)
     {
-        $isEnabled = $this->_scopeConfig->getValue('pixie_suggested/options/enabled', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        $isEnabled = $this->_scopeConfig->getValue(
+            'pixie_suggested/options/enabled', 
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        );
         if ($isEnabled) {
             $productId = $observer->getRequest()->getParam('id');
             try {

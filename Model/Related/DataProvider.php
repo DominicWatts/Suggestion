@@ -27,7 +27,6 @@ class DataProvider extends AbstractDataProvider
      */
     protected $dataPersistor;
 
-
     /**
      * @param string $name
      * @param string $primaryFieldName

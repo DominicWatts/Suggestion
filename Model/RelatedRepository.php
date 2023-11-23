@@ -45,7 +45,6 @@ class RelatedRepository implements RelatedRepositoryInterface
      */
     protected $relatedCollectionFactory;
 
-
     /**
      * @param ResourceRelated $resource
      * @param RelatedInterfaceFactory $relatedFactory

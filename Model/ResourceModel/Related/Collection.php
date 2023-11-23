@@ -64,7 +64,7 @@ class Collection extends AbstractCollection
         StoreManagerInterface $storeManager,
         TimezoneInterface $localeDate,
         AdapterInterface $connection = null,
-        AbstractDb $resource = null,
+        AbstractDb $resource = null
     ) {
         $this->_storeManager = $storeManager;
         $this->localeDate = $localeDate;

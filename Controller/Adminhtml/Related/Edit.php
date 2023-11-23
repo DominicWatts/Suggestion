@@ -56,7 +56,9 @@ class Edit extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
             $id ? __('Edit Related') : __('New Related')
         );
         $resultPage->getConfig()->getTitle()->prepend(__('Relateds'));
-        $resultPage->getConfig()->getTitle()->prepend($model->getId() ? __('Edit Related %1', $model->getId()) : __('New Related'));
+        $resultPage->getConfig()->getTitle()->prepend(
+            $model->getId() ? __('Edit Related %1', $model->getId()) : __('New Related')
+        );
         return $resultPage;
     }
 }

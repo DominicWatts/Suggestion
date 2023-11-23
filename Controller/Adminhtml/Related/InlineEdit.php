@@ -41,14 +41,14 @@ class InlineEdit extends \Magento\Backend\App\Action
                 $messages[] = __('Please correct the data sent.');
                 $error = true;
             } else {
-                foreach (array_keys($postItems) as $modelid) {
+                foreach (array_keys($postItems) as $modelId) {
                     /** @var \PixieMedia\Suggestion\Model\Related $model */
-                    $model = $this->_objectManager->create(\PixieMedia\Suggestion\Model\Related::class)->load($modelid);
+                    $model = $this->_objectManager->create(\PixieMedia\Suggestion\Model\Related::class)->load($modelId);
                     try {
-                        $model->setData(array_merge($model->getData(), $postItems[$modelid]));
+                        $model->setData($postItems[$modelId] + $model->getData());
                         $model->save();
                     } catch (\Exception $e) {
-                        $messages[] = "[Related ID: {$modelid}]  {$e->getMessage()}";
+                        $messages[] = "[Related ID: {$modelId}]  {$e->getMessage()}";
                         $error = true;
                     }
                 }

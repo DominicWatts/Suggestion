@@ -1,8 +1,43 @@
 <?xml version="1.0" ?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!--
         <referenceContainer name="product.info.main">
-            <block class="PixieMedia\Suggestion\Block\Suggested" name="pixie.suggested" as="pixie.suggested" template="PixieMedia_Suggestion::suggested.phtml" after="product.price.tier"/>
+            <block class="PixieMedia\Suggestion\Block\Suggested" name="pixie.suggested" as="pixie.suggested" template="PixieMedia_Suggestion::list.phtml" after="product.price.tier">
+                <arguments>
+                    <argument name="viewModel" xsi:type="object">Magento\Catalog\ViewModel\Product\OptionsData</argument>
+                    <argument name="mode" xsi:type="string">list</argument>
+                    <argument name="title" xsi:type="string">You may be interested in these</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\RendererList" name="category.product.type.details.renderers" as="details.renderers">
+                    <block class="Magento\Framework\View\Element\Template" name="category.product.type.details.renderers.default" as="default"/>
+                </block>
+                <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="catalogsearch.product.addto" as="addto">
+                    <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare" 
+                           name="catalogsearch.product.addto.compare" as="compare"
+                           template="Magento_Catalog::product/list/addto/compare.phtml"/>
+                </block>
+            </block>
         </referenceContainer>
+        -->
+        <!--
+        <referenceContainer name="content">
+            <block class="PixieMedia\Suggestion\Block\Suggested" name="pixie.suggested" as="pixie.suggested" template="PixieMedia_Suggestion::list.phtml">
+                <arguments>
+                    <argument name="viewModel" xsi:type="object">Magento\Catalog\ViewModel\Product\OptionsData</argument>
+                    <argument name="mode" xsi:type="string">grid</argument>
+                    <argument name="title" xsi:type="string">You may be interested in these</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\RendererList" name="category.product.type.details.renderers" as="details.renderers">
+                    <block class="Magento\Framework\View\Element\Template" name="category.product.type.details.renderers.default" as="default"/>
+                </block>
+                <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="catalogsearch.product.addto" as="addto">
+                    <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare" 
+                           name="catalogsearch.product.addto.compare" as="compare"
+                           template="Magento_Catalog::product/list/addto/compare.phtml"/>
+                </block>
+            </block>
+        </referenceContainer>
+        -->
     </body>
 </page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="PixieMedia_Suggestion::top_level" title="Suggestions" module="PixieMedia_Suggestion" sortOrder="9999" resource="PixieMedia_Suggestion::top_level" parent="PixieMedia_Core::index"/>
+        <add id="PixieMedia_Suggestion::pixiemedia_suggestion_related" title="Related" module="PixieMedia_Suggestion" sortOrder="9999" resource="PixieMedia_Suggestion::Related" parent="PixieMedia_Suggestion::top_level" action="pixiemedia_suggestion/related/index"/>
+    </menu>
+</config>

@@ -1,6 +1,6 @@
 {
     "name": "dominicwatts/suggestion",
-    "description": "Related products to show when SKU is OOS or coming soon",
+    "description": "Bespoke suggested products block to show when SKU is OOS",
     "type": "magento2-module",
     "license": "GPL-3.0",
     "version": "1.0.0",

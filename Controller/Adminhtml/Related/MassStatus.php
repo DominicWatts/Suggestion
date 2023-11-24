@@ -4,17 +4,17 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
+
 namespace PixieMedia\Suggestion\Controller\Adminhtml\Related;
 
 use Exception;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Action\HttpPostActionInterface;
 use Magento\Framework\Controller\Result\Redirect;
-use Magento\Framework\Exception\LocalizedException;
+use Magento\Framework\Registry;
 use Magento\Ui\Component\MassAction\Filter;
 use PixieMedia\Suggestion\Controller\Adminhtml\Related;
 use PixieMedia\Suggestion\Model\ResourceModel\Related\CollectionFactory as CollectionFactory;
-use Magento\Framework\Registry;
 
 /**
  * Updates status for a batch of products.

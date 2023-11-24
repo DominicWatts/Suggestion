@@ -208,7 +208,7 @@ class Related extends AbstractModel implements RelatedInterface
     public function setName($name)
     {
         return $this->setData(self::NAME, $name);
-    }    
+    }
 
     /**
      * Get products collection

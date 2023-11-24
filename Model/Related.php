@@ -195,6 +195,22 @@ class Related extends AbstractModel implements RelatedInterface
     }
 
     /**
+     * @inheritDoc
+     */
+    public function getName()
+    {
+        return $this->getData(self::NAME);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setName($name)
+    {
+        return $this->setData(self::NAME, $name);
+    }    
+
+    /**
      * Get products collection
      * @return CollectionFactory
      */

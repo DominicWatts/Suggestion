@@ -106,6 +106,18 @@
 				<indexField>related_id</indexField>
 			</settings>
 		</selectionsColumn>
+        <column name="name">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Name</label>
+				<editor>
+					<editorType>text</editorType>
+					<validation>
+						<rule name="required-entry" xsi:type="boolean">false</rule>
+					</validation>
+				</editor>
+			</settings>
+		</column>
 		<column name="parent_sku">
 			<settings>
 				<filter>text</filter>

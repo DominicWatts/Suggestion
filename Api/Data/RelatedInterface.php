@@ -9,6 +9,7 @@ namespace PixieMedia\Suggestion\Api\Data;
 
 interface RelatedInterface
 {
+    public const NAME = 'name';
     public const UPDATED_AT = 'updated_at';
     public const RELATED_IDS = 'related_ids';
     public const STORE_ID = 'store_id';
@@ -107,4 +108,17 @@ interface RelatedInterface
      * @return \PixieMedia\Suggestion\Related\Api\Data\RelatedInterface
      */
     public function setStoreId($storeId);
+
+    /**
+     * Get name
+     * @return string|null
+     */
+    public function getName();
+
+    /**
+     * Set name
+     * @param string $name
+     * @return \PixieMedia\Suggestion\Related\Api\Data\RelatedInterface
+     */
+    public function setName($name);
 }

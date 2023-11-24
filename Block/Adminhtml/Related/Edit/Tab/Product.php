@@ -65,7 +65,7 @@ class Product extends Extended implements TabInterface
     /**
      * @var RelatedFactory
      */
-    protected $groupFactory;
+    protected $relatedFactory;
 
     /**
      * Undocumented function
@@ -78,7 +78,7 @@ class Product extends Extended implements TabInterface
      * @param \Magento\Catalog\Model\Product\Visibility $visibility
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory
-     * @param \PixieMedia\Suggestion\Model\RelatedFactory $groupFactory
+     * @param \PixieMedia\Suggestion\Model\RelatedFactory $relatedFactory
      * @param array $data
      */
     public function __construct(
@@ -91,7 +91,7 @@ class Product extends Extended implements TabInterface
         Visibility $visibility,
         Registry $coreRegistry,
         ProductCollectionFactory $productCollectionFactory,
-        RelatedFactory $groupFactory,
+        RelatedFactory $relatedFactory,
         array $data = []
     ) {
         $this->_setsFactory = $setsFactory;
@@ -101,7 +101,7 @@ class Product extends Extended implements TabInterface
         $this->_visibility = $visibility;
         $this->coreRegistry = $coreRegistry;
         $this->productCollectionFactory = $productCollectionFactory;
-        $this->groupFactory = $groupFactory;
+        $this->relatedFactory = $relatedFactory;
         parent::__construct($context, $backendHelper, $data);
     }
 
@@ -352,6 +352,10 @@ class Product extends Extended implements TabInterface
 
         if ($selected = $this->coreRegistry->registry('pixiemedia_suggestion_related')) {
             $collection = $selected->getProductsCollection();
+        } elseif ($relatedId = $this->getRequest()->getParam('related_id')) {
+            if ($selected = $this->relatedFactory->create()->load($relatedId)) {
+                $collection = $selected->getProductsCollection();
+            }
         }
 
         foreach ($collection as $product) {

@@ -69,7 +69,8 @@ class Save extends \Magento\Backend\App\Action
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\Exception $e) {
                 $this->messageManager->addExceptionMessage(
-                    $e, __('Something went wrong while saving the OOS Suggestion.'
+                    $e,
+                    __('Something went wrong while saving the OOS Suggestion.'
                 ));
             }
 

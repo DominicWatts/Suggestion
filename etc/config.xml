@@ -4,6 +4,9 @@
         <pixie_suggested>
             <options>
                 <enabled>0</enabled>
+                <panel_title>You may be interested in these</panel_title>
+                <random>1</random>
+                <limit>4</limit>
             </options>
         </pixie_suggested>
     </default>

@@ -15,6 +15,18 @@
                     <comment>Use suggested logic on OOS products</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="panel_title" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Panel Title</label>
+                    <comment/>
+                </field>
+                <field id="random" type="select" sortOrder="30" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Random Sort</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                 <field id="limit" type="text" sortOrder="40" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Limit</label>
+                    <comment/>
+                </field>
             </group>
         </section>
     </system>

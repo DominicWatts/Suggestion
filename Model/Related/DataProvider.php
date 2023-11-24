@@ -60,7 +60,7 @@ class DataProvider extends AbstractDataProvider
         }
         $items = $this->collection->getItems();
         foreach ($items as $model) {
-            $this->loadedData[$model->getId()] = $model->getData();
+            $this->loadedData[$model->getId()]['general'] = $model->getData();
         }
         $data = $this->dataPersistor->get('pixiemedia_suggestion_related');
 

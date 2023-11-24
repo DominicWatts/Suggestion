@@ -7,7 +7,6 @@
                 <arguments>
                     <argument name="viewModel" xsi:type="object">Magento\Catalog\ViewModel\Product\OptionsData</argument>
                     <argument name="mode" xsi:type="string">list</argument>
-                    <argument name="title" xsi:type="string">You may be interested in these</argument>
                 </arguments>
                 <block class="Magento\Framework\View\Element\RendererList" name="category.product.type.details.renderers" as="details.renderers">
                     <block class="Magento\Framework\View\Element\Template" name="category.product.type.details.renderers.default" as="default"/>
@@ -26,7 +25,6 @@
                 <arguments>
                     <argument name="viewModel" xsi:type="object">Magento\Catalog\ViewModel\Product\OptionsData</argument>
                     <argument name="mode" xsi:type="string">grid</argument>
-                    <argument name="title" xsi:type="string">You may be interested in these</argument>
                 </arguments>
                 <block class="Magento\Framework\View\Element\RendererList" name="category.product.type.details.renderers" as="details.renderers">
                     <block class="Magento\Framework\View\Element\Template" name="category.product.type.details.renderers.default" as="default"/>

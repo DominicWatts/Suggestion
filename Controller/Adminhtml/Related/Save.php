@@ -34,8 +34,9 @@ class Save extends \Magento\Backend\App\Action
     {
         /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultRedirectFactory->create();
-        $data = $this->getRequest()->getPostValue();
+        $data = $this->getRequest()->getPostValue('general');
         if ($data) {
+            $data['product'] = $this->getRequest()->getPostValue('product');
             $id = $this->getRequest()->getParam('related_id');
 
             $model = $this->_objectManager->create(\PixieMedia\Suggestion\Model\Related::class)->load($id);

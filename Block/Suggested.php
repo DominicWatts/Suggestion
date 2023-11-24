@@ -128,6 +128,7 @@ class Suggested extends \Magento\Catalog\Block\Product\ListProduct
             ->addAttributeToFilter('status', ['eq' => 1])
             ->setVisibility($this->productVisibility->getVisibleInSiteIds());
         $this->stockHelper->addInStockFilterToCollection($collection);
+        $collection->getSelect()->orderRand();
         $collection->setPageSize(10);
         $collection->setCurPage(1);
         return $collection;

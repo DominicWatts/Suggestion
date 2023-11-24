@@ -7,13 +7,15 @@ use Magento\Framework\App\Action\Action;
  * @var $block \PixieMedia\Suggestion\Block\Suggested
  * @var \Magento\Framework\Escaper $escaper
  * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ * phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+ * phpcs:disable Magento2.Templates.ThisInTemplate.FoundHelper
  */
 ?>
 <div class="product suggested">
 <?php
 $_productCollection = $block->getAllSuggested();
 /** @var \Magento\Catalog\Helper\Output $_helper */
-$_helper = $block->getData('outputHelper');
+$_helper = $this->helper(\Magento\Catalog\Helper\Output::class);
 ?>
 <?php if ($_productCollection && $_productCollection->count()): ?>
     <?php if ($block->getTitle()): ?>
@@ -118,7 +120,7 @@ $_helper = $block->getData('outputHelper');
                                         'product-item-info_' . $_product->getId() . ' div.actions-primary'
                                     ) : '' ?>
                                 <div data-role="add-to-links" class="actions-secondary">
-                                    <?php if ($block->helper(Magento\Wishlist\Helper\Data::class)->isAllow()):?>
+                                    <?php if ($this->helper(\Magento\Wishlist\Helper\Data::class)->isAllow()):?>
                                         <a href="#"
                                            data-post='<?= /* @noEscape */ $block->getAddToWishlistParams($_product) ?>'
                                            class="action towishlist"

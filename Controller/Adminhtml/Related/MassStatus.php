@@ -1,10 +1,9 @@
 <?php
 /**
+ *
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-declare(strict_types=1);
-
 namespace PixieMedia\Suggestion\Controller\Adminhtml\Related;
 
 use Exception;
@@ -18,11 +17,10 @@ use PixieMedia\Suggestion\Model\ResourceModel\Related\CollectionFactory as Colle
 use Magento\Framework\Registry;
 
 /**
- * Mass delete action class
- *
+ * Updates status for a batch of products.
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
-class MassDelete extends Related implements HttpPostActionInterface
+class MassStatus extends Related implements HttpPostActionInterface
 {
     /**
      * @var Filter
@@ -52,19 +50,20 @@ class MassDelete extends Related implements HttpPostActionInterface
     }
 
     /**
-     * Mass delete action
+     * Update suggestion(s) status action
      *
-     * @return Redirect
-     * @throws LocalizedException
+     * @return \Magento\Backend\Model\View\Result\Redirect
      */
     public function execute(): Redirect
     {
         $collection = $this->filter->getCollection($this->collectionFactory->create());
+        $status = (int) $this->getRequest()->getParam('status');
 
         $notProcessedCount = $processedCount = 0;
         try {
             foreach ($collection as $suggestion) {
-                $suggestion->delete();
+                $suggestion->setStatus($status);
+                $suggestion->save();
                 $processedCount++;
             }
         } catch (Exception $e) {

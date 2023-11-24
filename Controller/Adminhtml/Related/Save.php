@@ -68,7 +68,9 @@ class Save extends \Magento\Backend\App\Action
             } catch (LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\Exception $e) {
-                $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the OOS Suggestion.'));
+                $this->messageManager->addExceptionMessage(
+                    $e, __('Something went wrong while saving the OOS Suggestion.'
+                ));
             }
 
             $this->dataPersistor->set('pixiemedia_suggestion_related', $data);

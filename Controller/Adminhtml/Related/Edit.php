@@ -40,7 +40,7 @@ class Edit extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
         if ($id) {
             $model->load($id);
             if (!$model->getId()) {
-                $this->messageManager->addErrorMessage(__('This Related no longer exists.'));
+                $this->messageManager->addErrorMessage(__('This OOS Suggestion no longer exists.'));
                 /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
                 $resultRedirect = $this->resultRedirectFactory->create();
                 return $resultRedirect->setPath('*/*/');
@@ -52,12 +52,12 @@ class Edit extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $this->initPage($resultPage)->addBreadcrumb(
-            $id ? __('Edit Related') : __('New Related'),
-            $id ? __('Edit Related') : __('New Related')
+            $id ? __('Edit OOS Suggestion') : __('New OOS Suggestion'),
+            $id ? __('Edit OOS Suggestion') : __('New OOS Suggestion')
         );
-        $resultPage->getConfig()->getTitle()->prepend(__('Relateds'));
+        $resultPage->getConfig()->getTitle()->prepend(__('OOS Suggestions'));
         $resultPage->getConfig()->getTitle()->prepend(
-            $model->getId() ? __('Edit Related %1', $model->getId()) : __('New Related')
+            $model->getId() ? __('Edit OOS Suggestion %1', $model->getId()) : __('New OOS Suggestion')
         );
         return $resultPage;
     }

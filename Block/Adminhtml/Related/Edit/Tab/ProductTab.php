@@ -54,7 +54,7 @@ class ProductTab extends Template implements TabInterface
      */
     public function canShowTab()
     {
-        return $this->coreRegistry->registry('pixiemedia_suggestion_group');
+        return $this->coreRegistry->registry('pixiemedia_suggestion_related');
     }
 
     /**

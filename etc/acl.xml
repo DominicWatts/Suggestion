@@ -3,16 +3,16 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="PixieMedia_Suggestion::Related" title="Related" sortOrder="10">
-                    <resource id="PixieMedia_Suggestion::Related_save" title="Save Related" sortOrder="10"/>
-                    <resource id="PixieMedia_Suggestion::Related_delete" title="Delete Related" sortOrder="20"/>
-                    <resource id="PixieMedia_Suggestion::Related_update" title="Update Related" sortOrder="30"/>
-                    <resource id="PixieMedia_Suggestion::Related_view" title="View Related" sortOrder="40"/>
+                <resource id="PixieMedia_Suggestion::Related" title="OOS Suggestions" sortOrder="10">
+                    <resource id="PixieMedia_Suggestion::Related_save" title="Save OOS Suggestions" sortOrder="10"/>
+                    <resource id="PixieMedia_Suggestion::Related_delete" title="Delete OOS Suggestions" sortOrder="20"/>
+                    <resource id="PixieMedia_Suggestion::Related_update" title="Update OOS Suggestions" sortOrder="30"/>
+                    <resource id="PixieMedia_Suggestion::Related_view" title="View OOS Suggestions" sortOrder="40"/>
                 </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="PixieMedia_Suggestion::config_pixiemedia_suggestion" title="pixie_suggested"/>
+                            <resource id="PixieMedia_Suggestion::config_pixiemedia_suggestion" title="Pixie OOS Suggestions"/>
                         </resource>
                     </resource>
                 </resource>

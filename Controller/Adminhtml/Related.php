@@ -33,8 +33,8 @@ abstract class Related extends \Magento\Backend\App\Action
     public function initPage($resultPage)
     {
         $resultPage->setActiveMenu(self::ADMIN_RESOURCE)
-            ->addBreadcrumb(__('PixieMedia'), __('PixieMedia'))
-            ->addBreadcrumb(__('Related'), __('Related'));
+            ->addBreadcrumb(__('PixieMedia'), __('Pixie Media'))
+            ->addBreadcrumb(__('Related'), __('OOS Suggestion'));
         return $resultPage;
     }
 }

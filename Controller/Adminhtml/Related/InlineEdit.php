@@ -48,7 +48,7 @@ class InlineEdit extends \Magento\Backend\App\Action
                         $model->setData($postItems[$modelId] + $model->getData());
                         $model->save();
                     } catch (\Exception $e) {
-                        $messages[] = "[Related ID: {$modelId}]  {$e->getMessage()}";
+                        $messages[] = "[OOS Suggestion ID: {$modelId}]  {$e->getMessage()}";
                         $error = true;
                     }
                 }

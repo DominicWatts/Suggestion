@@ -40,7 +40,7 @@ class Save extends \Magento\Backend\App\Action
 
             $model = $this->_objectManager->create(\PixieMedia\Suggestion\Model\Related::class)->load($id);
             if (!$model->getId() && $id) {
-                $this->messageManager->addErrorMessage(__('This Related no longer exists.'));
+                $this->messageManager->addErrorMessage(__('This OOS Suggestion no longer exists.'));
                 return $resultRedirect->setPath('*/*/');
             }
 
@@ -58,7 +58,7 @@ class Save extends \Magento\Backend\App\Action
 
             try {
                 $model->save();
-                $this->messageManager->addSuccessMessage(__('You saved the Related.'));
+                $this->messageManager->addSuccessMessage(__('You saved the OOS Suggestion.'));
                 $this->dataPersistor->clear('pixiemedia_suggestion_related');
 
                 if ($this->getRequest()->getParam('back')) {
@@ -68,7 +68,7 @@ class Save extends \Magento\Backend\App\Action
             } catch (LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\Exception $e) {
-                $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the Related.'));
+                $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the OOS Suggestion.'));
             }
 
             $this->dataPersistor->set('pixiemedia_suggestion_related', $data);

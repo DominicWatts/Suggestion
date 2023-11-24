@@ -33,7 +33,7 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->prepend(__("Related"));
+        $resultPage->getConfig()->getTitle()->prepend(__("OOS Suggestion"));
         return $resultPage;
     }
 }

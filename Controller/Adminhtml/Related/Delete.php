@@ -27,7 +27,7 @@ class Delete extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
                 $model->load($id);
                 $model->delete();
                 // display success message
-                $this->messageManager->addSuccessMessage(__('You deleted the Related.'));
+                $this->messageManager->addSuccessMessage(__('You deleted the OOS Suggestion.'));
                 // go to grid
                 return $resultRedirect->setPath('*/*/');
             } catch (\Exception $e) {
@@ -38,7 +38,7 @@ class Delete extends \PixieMedia\Suggestion\Controller\Adminhtml\Related
             }
         }
         // display error message
-        $this->messageManager->addErrorMessage(__('We can\'t find a Related to delete.'));
+        $this->messageManager->addErrorMessage(__('We can\'t find a OOS Suggestion to delete.'));
         // go to grid
         return $resultRedirect->setPath('*/*/');
     }
